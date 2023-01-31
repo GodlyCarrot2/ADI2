@@ -1,20 +1,26 @@
 public class Tile {
     private int x;
     private int y;
-    private String color;
+    private int color;
 
     public Tile() {
         int x = 0;
         int y = 0;
+        int color = 0;
     }
 
-    public Tile(int a, int b) {
+    public Tile(int a, int b, int c) {
         x = a;
         y = b;
+        color = c;
     }
 
     public int getX() {
         return x;
+    }
+
+    public int getColor() {
+        return color;
     }
 
     public int getY() {
@@ -27,5 +33,9 @@ public class Tile {
 
     public void setY(int b) {
         y = b;
+    }
+
+    public void setColor(int c) {
+        color = c;
     }
 }

@@ -56,7 +56,7 @@ public class Board {
                 board[x][y] = color; 
     }
     
-
+    /*
     public static void checkColor() {
         ArrayList<Tile> surface = new ArrayList<Tile>();
         surface.add(new Tile(0, 0));
@@ -78,5 +78,29 @@ public class Board {
                 }
             }
         }
-    }    
+    }
+    */
+
+    public static void checkColor() {
+        ArrayList<Tile> p1 = new ArrayList<Tile>();
+
+
+        Tile start = new Tile(0, 0, board[0][0]);
+        p1.add(start);
+
+        for (int i = 0; i < p1.size(); i++) {
+            int x = p1.get(i).getX();
+            int y = p1.get(i).getY();
+            /*
+            if (p1.get(i).getColor() == board[x][y]) {
+                //System.out.println("hi");
+                Tile new1 = new Tile(x, y, board[x][y]);
+                p1.add(new1);
+            }
+            */
+            System.out.println("1");
+            //System.out.print(p1.get(1).getX() + " " + p1.get(1).getY());
+            break;
+        }
+    }
 }
