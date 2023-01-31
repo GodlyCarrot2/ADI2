@@ -62,19 +62,20 @@ public class Board {
         surface.add(new Tile(0, 0));
         for (int l = 1; l < dimension; l++) { // For each shell
             for (int i = 0; i < l; i++) { //in x 
+                for (int j = 0; j < l; j++) {
                     ArrayList<Tile> tempSurface = new ArrayList<Tile>();
                     for (Tile tile: surface) {
                         if ((Math.abs(tile.getX() - i) == 1 || Math.abs(tile.getY() - j) == 1)) {
                             if (board[tile.getX()][tile.getY()] == board[0][0]) {
                                 tempSurface.add(new Tile(i, j));
-
+                                
                             }
                         }
                     }
                     for (Tile tile : tempSurface) {
                         surface.add(tile);
-                    }
-                
+                    }   
+                }
             }
         }
     }    
